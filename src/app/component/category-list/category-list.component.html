@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h2 class="page-header">Category List</h2>
+    </div>
+
+    <div class="col-lg-4 col-sm-6 text-center" *ngFor="let category of categoryList">
+        <h3><a [routerLink]="['/category-detail', category._id]">{{category.name}}</a></h3>
+        <p>{{category.created_at | date:'dd/MM/y' }}</p>
+    </div>
+</div>
+
